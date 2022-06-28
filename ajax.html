@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+
+  <p  id="demo">here we load data.</p>
+
+<!--when this button is clicked, it will run the loaddata function-->
+  <button onclick="loaddata()">click</button>
+
+
+
+  <script>
+   function loaddata(){
+  //create object to send request to the server for a file   
+    var xhttp = new XMLHttpRequest();
+  //to check the state of the request, when the server response is equal 4 it will execute console.log 
+     xhttp.onreadystatechange=function(){
+       if(this.readyState==4 && this.status==200){
+  //use console.log to print the URL/file data in Console.  
+       console.log(this.responseText);
+  //use document.getelement to print the file data on the outside of console i.e on html page
+      document.getElementById("demo").innerHTML= this.responseText;
+  //use else if for the error handling, we can use for in and while loop also to print the data  
+     }else if(this.readyState==4 && this.status==404){
+       document.getElementById("demo").innerHTML= "file not found";
+     }
+      };
+     
+
+  //this is the file
+      xhttp.open("GET","https://jsonplaceholder.typicode.com/posts"/*filename.txt with path*/,true);
+      xhttp.send();
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+
+  <title>JSON</title>
+</head>
+<body>
+
+  <div id="addbutton">add to storage</div>
+  <div id="seebutton">view storage</div>
+  <input type="text" id="name">
+  <input type="text" id="last">
+  
+
+  
+
+  <script>
+    document.getElementById("addbutton").addEventListener("click", addtostorage);
+
+    document.getElementById("seebutton").addEventListener("click", viewstorage);
+
+    //addparse here to hold the storage content to the local host
+    const people=JSON.parse(localStorage.getItem("tester1")) || {"name":"none","last":"none"}
+    console.log(people); 
+
+    function addtostorage(){
+      let tempname=document.getElementById("name").value;
+      let templast=document.getElementById("last").value
+      
+      //convert it into object and stringify
+      let myobj=JSON.stringify({"name":tempname,"last":templast});
+      console.log(myobj);
+       
+      localStorage.setItem("tester1", myJSON);
+
+      console.log("clicked" + myobj);
+    }
+    function viewstorage(){
+      let tempholder=JSON.parse(localStorage.getItem("tester1")) || people; 
+
+      //parse the data here to manipulate
+      console.log(tempholder );
+    }
+   
+
+
+   var myJSON={"name":"valola",
+   "last":"galoa", 
+  "age":76};
+
+  //STEP1. getting data and convert to string
+  var myJSONstringconvert=JSON.stringify(myJSON);
+
+  //STEP2. covert to object(useable format) and working with it
+  var myJSONparsed=JSON.parse(myJSONstringconvert);
+
+    //STEP3. update any values
+    myJSONparsed.name="kalolo";
+    console.log(myJSONparsed);
+
+    //STEP4. convert data back to string and send data
+    var senddata=JSON.stringify(myJSONparsed);
+    console.log(senddata);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
