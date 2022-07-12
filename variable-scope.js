@@ -570,6 +570,25 @@ let x=10, y=10;
   return artvalue;
 });
 console.log(articlePrices, totalPrices);
+      
+      
+//---------------------------------------------------------
+ //EQUALITY
+ let obj1 = {name:"CK"};
+ let obj2 = {name:"CK"};
+ console.log(obj1==obj2);
+ console.log(obj1===obj2);
+
+ let obj3 = obj2;
+ console.log(obj2===obj3);
+ console.log(obj2==obj3);
+
+ let arr1 = ["sports","cooking"];
+ let arr2 = ["sports","cooking1"];
+ let arr3 = arr2;
+ console.log(arr1==arr2);
+ console.log(arr1===arr2);
+ console.log(arr2===arr3);
 
       
       
