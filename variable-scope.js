@@ -373,7 +373,18 @@ console.log(sortedValue.reverse());
    return output;
  }
 
- console.log(reverse([1, 2, 3, 4, 5, 6, 7])); 
+ console.log(reverse([1, 2, 3, 4, 5, 6, 7]));
+
+//----------------------------------------------------------
+ //*Reverse a STRINg with Function with "" i.e COMMA
+ let string = "vinay"; 
+ console.log(string.split("").reverse().join(""));
+ 
+ //*Reverse a String with Function witout ""
+ let str = "vinay"; 
+ console.log(str.split("").reverse().join());
+
+
 
 //------------------------------------------------------------
  //Reverse String
