@@ -163,7 +163,7 @@ console.log(name+2); //22, it takes '2' as a string
  //Function
 //   function add(a, b) {
 //   let result = a + b;
-//   return result;
+//   console.log(result)
 //  }
 
 //  add(3, 4);
