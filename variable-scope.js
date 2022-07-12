@@ -253,6 +253,12 @@ console.log(name+2); //22, it takes '2' as a string
   console.log(removedEle);
   console.log(hobbies);
 
+ 
+ //----------------------------------------------------------
+  //SLICE    
+  const arr = [23, 553, 46, 677, 57];
+  console.log(arr.slice(1, 3));
+
 //-------------------------------------------------------------
  //SPLICE() METHOD
 
@@ -307,6 +313,7 @@ console.log(name+2); //22, it takes '2' as a string
   console.log(test.indexOf(441,1));
   console.log(test.includes(12));
   console.log(test.includes(54545));
+  console.log(testResults.indexOf(11) !== -1); //FALSE
 
 //--------------------------------------------------------------
 //forof-- for Array and forin--- for Objects 
@@ -605,11 +612,7 @@ console.log(articlePrices, totalPrices);
  console.log(arr1===arr2);
  console.log(arr2===arr3);
       
-      
- //----------------------------------------------------------
-  //SLICE    
-  const arr = [23, 553, 46, 677, 57];
-  console.log(arr.slice(1, 3));
+     
 
       
       
