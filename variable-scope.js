@@ -455,8 +455,23 @@ console.log(result);
   console.log(filterValue);
 
 
+//-------------------------------------------------------
+ //SPLIT()
+ const text = "Welcome to JavaScript Tutorial - ItsJavaScript";
 
+// split the text into words using space as delimiter
+ const substr = text.split(" ");
+ console.log(substr);
 
+ //split the text into SINGLE LETTERS
+ const sub = text.split("");
+ console.log(sub);
+
+//------------------------------------------------------------
+ //JOIN()
+ const myText = "It is a long established fact that a reader will"
+ const newText = myText.split(" ").join("")
+ console.log(newText); 
 
 
 
