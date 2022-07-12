@@ -346,6 +346,18 @@ articlePrice.forEach((value, idx, articlePrice) => {
 });
 console.log(totalPrices);
 
+//--------------------------------------------------------
+ //MAP
+ const articlePrices= [10.99,5.99,3.99,6.59];
+
+ const tax=1.2;
+
+ const totalPrices=articlePrices.map((value, idx, articlePrices) => {
+  const artvalue= {index:idx, totalPrice: value + tax };
+  return artvalue;
+});
+console.log(totalPrices);
+
 
 //-----------------------------------------------------------
  //ARRAY REVERSE
@@ -581,17 +593,6 @@ let x=10, y=10;
   console.log(newArr.push(34));
   console.log(newArr);
 
-//--------------------------------------------------------
- //MAP
- const articlePrices= [10.99,5.99,3.99,6.59];
-
- const tax=1.2;
-
- const totalPrices=articlePrices.map((value, idx, articlePrices) => {
-  const artvalue= {index:idx, totalPrice: value + tax };
-  return artvalue;
-});
-console.log(articlePrices, totalPrices);
       
       
 //---------------------------------------------------------
