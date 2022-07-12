@@ -604,6 +604,12 @@ console.log(articlePrices, totalPrices);
  console.log(arr1==arr2);
  console.log(arr1===arr2);
  console.log(arr2===arr3);
+      
+      
+ //----------------------------------------------------------
+  //SLICE    
+  const arr = [23, 553, 46, 677, 57];
+  console.log(arr.slice(1, 3));
 
       
       
