@@ -334,8 +334,8 @@ console.log(name+2); //22, it takes '2' as a string
   console.log(totalPrices);
 
 articlePrice.forEach((value, idx, articlePrice) => {
-  const objvalue = { index: idx, totalPrice: value + shipping}
-  totalPrices.push(objvalue);
+  const artvalue = { index: idx, totalPrice: value + shipping}
+  totalPrices.push(artvalue);
 });
 console.log(totalPrices);
 
@@ -562,6 +562,11 @@ let x=10, y=10;
 
 
 
+      
+      
+      
+      
+      
 
 
 
