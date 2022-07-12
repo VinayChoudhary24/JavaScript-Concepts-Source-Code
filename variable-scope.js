@@ -514,6 +514,48 @@ console.log(sum);
 // //  console.log(numbers);
 // console.log(altNumbers);
 
+//-------------------------------------------------------------------------------
+//Logical Operators
+             /*
+               *AND(&&)
+               *OR(||)
+               *NOT(!)
+              */
+//AND OPERATOR(&&)
+ -used for boolean operations on two values.
+ -returs true if and only if its first and second Operand are true.
+   
+   let x =10, y =10;
+    if (x===10&&y===10){
+     console.log("true");
+     }else {
+     console.log("false");
+      
+//OR (||)
+      performs boolean expressions on two relational values.
+       -returs true if one or both operands are true.*/
+
+let x=10, y=10;
+ if (x===10||y===10) {
+  console.log("true");
+ } else {
+  console.log("false")
+ };
+
+      
+ //NOT (!)
+      -Unary operator
+      -it is placed before the single operand.*/
+ if X =True;
+  use ! i.e
+ !x =False
+
+
+
+
+
+
+
 
 
 
