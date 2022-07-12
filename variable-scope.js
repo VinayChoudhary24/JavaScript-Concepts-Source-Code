@@ -474,6 +474,16 @@ console.log(result);
  console.log(newText); 
 
 
+//-------------------------------------------------
+ //IF-ELSE IF -ELSE
+let age = 18;
+ if(age<17) {
+  console.log("you are not adult");
+ } else if(age>40) {
+  console.log("you are old")
+ } if(age === 18) {
+  console.log("you are adult")
+ };
 
 
 
