@@ -339,7 +339,21 @@ articlePrice.forEach((value, idx, articlePrice) => {
 });
 console.log(totalPrices);
 
+
 //-----------------------------------------------------------
+//BEST SHORT METHOD
+  var arr = [1, 2, 3, 4, 5, 6, 7];
+ console.log (arr.reverse());
+
+//------------------------------------------------------------
+//------------------------------------------------------
+ //REVERSE with For Loop
+//  var arr = [1, 2, 3, 4];
+//  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+//     [arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]]; 
+//  }
+//  console.log(arr);
+
 //----------------------------------------------------------
  //REVERSE AARAY
  const articlePrice = [5.99, 10.99, 3.99, 6.59];
