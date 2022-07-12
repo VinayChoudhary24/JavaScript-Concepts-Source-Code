@@ -306,6 +306,17 @@ console.log(name+2); //22, it takes '2' as a string
     })
     console.log(myIndex);
 
+
+//--------------------------------------------------
+ //Filter()
+  const prices = [22, 555, 56, 567]
+  let filterValue = prices.filter((price, idx, prices) => {
+   return price > 500;
+  });
+  console.log(prices);
+  console.log(filterValue);
+
+
 //---------------------------------------------------------
  //Includes()
   const test = [12,3313,441,4141,41414,1241455,]
@@ -359,15 +370,6 @@ console.log(totalPrices);
 console.log(totalPrices);
 
 
-//--------------------------------------------------
- //Filter()
-  const prices = [22, 555, 56, 567]
-  let filterValue = prices.filter((price, idx, prices) => {
-   return price > 500;
-  });
-  console.log(prices);
-  console.log(filterValue);
-
 
 //-------------------------------------------------------
  //SPLIT()
@@ -415,8 +417,6 @@ numbers.sort( function( a , b){
 });
 
 console.log(numbers)
-
-
 
 
 //------------------------------------------------------
