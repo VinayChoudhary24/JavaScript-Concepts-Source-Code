@@ -359,6 +359,45 @@ console.log(totalPrices);
 console.log(totalPrices);
 
 
+//--------------------------------------------------
+ //Filter()
+  const prices = [22, 555, 56, 567]
+  let filterValue = prices.filter((price, idx, prices) => {
+   return price > 500;
+  });
+  console.log(prices);
+  console.log(filterValue);
+
+
+//-------------------------------------------------------
+ //SPLIT()
+ const text = "Welcome to JavaScript Tutorial - ItsJavaScript";
+
+// split the text into words using space as delimiter
+ const substr = text.split(" ");
+ console.log(substr);
+
+ //split the text into SINGLE LETTERS
+ const sub = text.split("");
+ console.log(sub);
+
+//------------------------------------------------------------
+ //JOIN()
+ const myText = "It is a long established fact that a reader will"
+ const newText = myText.split(" ").join("")
+ console.log(newText);
+
+
+//----------------------------------------------------
+ //SPREAD OPERATOR
+//  const numbers = [11,231,14,4155,];
+//  const altNumbers = [...numbers];
+// //  console.log(altNumbers);
+//  console.log(altNumbers.push(6767, 98));
+// //  console.log(numbers);
+// console.log(altNumbers);
+
+
 //-----------------------------------------------------------
  //ARRAY REVERSE
 //BEST SHORT METHOD
@@ -478,34 +517,7 @@ const string = ('Hello');
 const result = reverseString(string);
 console.log(result);
 
-
-//--------------------------------------------------
- //Filter()
-  const prices = [22, 555, 56, 567]
-  let filterValue = prices.filter((price, idx, prices) => {
-   return price > 500;
-  });
-  console.log(prices);
-  console.log(filterValue);
-
-
-//-------------------------------------------------------
- //SPLIT()
- const text = "Welcome to JavaScript Tutorial - ItsJavaScript";
-
-// split the text into words using space as delimiter
- const substr = text.split(" ");
- console.log(substr);
-
- //split the text into SINGLE LETTERS
- const sub = text.split("");
- console.log(sub);
-
-//------------------------------------------------------------
- //JOIN()
- const myText = "It is a long established fact that a reader will"
- const newText = myText.split(" ").join("")
- console.log(newText); 
+ 
 
 
 //-------------------------------------------------
@@ -538,15 +550,6 @@ let age = 18;
 },0);
 console.log(prices);
 console.log(sum);
-
-//----------------------------------------------------
- //SPREAD OPERATOR
-//  const numbers = [11,231,14,4155,];
-//  const altNumbers = [...numbers];
-// //  console.log(altNumbers);
-//  console.log(altNumbers.push(6767, 98));
-// //  console.log(numbers);
-// console.log(altNumbers);
 
 //-------------------------------------------------------------------------------
 //Logical Operators
