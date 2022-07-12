@@ -485,7 +485,34 @@ let age = 18;
   console.log("you are adult")
  };
 
+//--------------------------------------------------------
+ //ARRAY DESTRUCTING
+ const userDetails= ["Max","Schwarz","Mr",30];
+//  const firstName = userName[0];
+ // const lastName = nameData[1];
+ const[firstName,lastName, ...otherInformation]=nameData;
+ console.log(firstName);
+ console.log(lastName);
+ console.log(otherInformation);
 
+
+//----------------------------------------------------
+ //ARRAY Reduce
+ const prices= [10.99,5.99,3.99,6.59];
+ const sum=prices.reduce((total, curValue, currentIndex, arr) => {
+  return total + curValue;
+},0);
+console.log(prices);
+console.log(sum);
+
+//----------------------------------------------------
+ //SPREAD OPERATOR
+//  const numbers = [11,231,14,4155,];
+//  const altNumbers = [...numbers];
+// //  console.log(altNumbers);
+//  console.log(altNumbers.push(6767, 98));
+// //  console.log(numbers);
+// console.log(altNumbers);
 
 
 
