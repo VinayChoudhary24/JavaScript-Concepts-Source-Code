@@ -375,6 +375,7 @@ console.log(sortedValue.reverse());
 
  console.log(reverse([1, 2, 3, 4, 5, 6, 7]));
 
+
 //----------------------------------------------------------
  //*Reverse a STRINg with Function with "" i.e COMMA
  let string = "vinay"; 
@@ -383,7 +384,6 @@ console.log(sortedValue.reverse());
  //*Reverse a String with Function witout ""
  let str = "vinay"; 
  console.log(str.split("").reverse().join());
-
 
 
 //------------------------------------------------------------
@@ -431,6 +431,14 @@ const result = reverseString(string);
 console.log(result);
 
 
+//--------------------------------------------------
+ //Filter()
+  const prices = [22, 555, 56, 567]
+  let filterValue = prices.filter((price, idx, prices) => {
+   return price > 500;
+  });
+  console.log(prices);
+  console.log(filterValue);
 
 
 
