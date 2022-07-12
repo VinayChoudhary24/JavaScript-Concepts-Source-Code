@@ -341,11 +341,26 @@ console.log(totalPrices);
 
 
 //-----------------------------------------------------------
+ //ARRAY REVERSE
 //BEST SHORT METHOD
   var arr = [1, 2, 3, 4, 5, 6, 7];
  console.log (arr.reverse());
 
 //------------------------------------------------------------
+ //ARRAY SORT
+ 
+let numbers = [0, 123 , 223, 53, 130, 20, 30 ];
+numbers.sort( function( a , b){
+    if(a > b) return 1;
+    if(a < b) return -1;
+    return 0;
+});
+
+console.log(numbers)
+
+
+
+
 //------------------------------------------------------
  //REVERSE with For Loop
 //  var arr = [1, 2, 3, 4];
