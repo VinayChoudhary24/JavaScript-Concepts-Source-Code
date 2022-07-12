@@ -551,6 +551,13 @@ let x=10, y=10;
  !x =False
 
 
+ //-----------------------------------------------------
+  //ARRAY CONCAT
+  const arr1 =[12, 33, 44, 555];
+
+  let newArr = arr1.concat([23424, 23525, 235542]);
+  console.log(newArr.push(34));
+  console.log(newArr);
 
 
 
