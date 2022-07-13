@@ -219,6 +219,7 @@ console.log(name+2); //22, it takes '2' as a string
  console.log(typeof (function () {}))         // Returns "function"
  console.log(typeof (myCar))                  // Returns "undefined" *
  console.log(typeof (null))                   // Returns "object"
+ console.log(typeof(undefined));
 
 //--------------------------------------------------------------
  //UNDEFINED:- Default value of uninitialized variables
@@ -232,13 +233,21 @@ console.log(name+2); //22, it takes '2' as a string
  //Array
   const arr1= [1,2,3];
   console.log(arr1);
+ 
+  const arr = new Array(5);
+  console.log(arr) //5 Empty items
 
-  const arr2 = new Array(5);
-  console.log(arr2);
 
-  const arr3 = Array(5);
-  console.log(arr3);
+  const arr1 = Array(5);
+  console.log(arr1); //5 empty items
 
+  const arr2 = Array.of(1, 2); 
+  console.log(yetMoreNumbers); //error
+  console.log(arr2); //[1, 2]
+
+ const arr3 = Array.from("hello");
+ console.log(arr3); //Split h, e, l, l, o
+ 
 
 //----------------------------------------------------------
 //  //Array Operations(push, pop, shift, unshift)
@@ -273,6 +282,16 @@ console.log(name+2); //22, it takes '2' as a string
   console.log(removedElements);
   console.log(hobbies);
 
+
+ //-----------------------------------------------------
+  //ARRAY CONCAT
+  const arr1 =[12, 33, 44, 555];
+
+  let newArr = arr1.concat([23424, 23525, 235542]);
+  console.log(newArr.push(34));
+  console.log(newArr);
+
+
 //------------------------------------------------------------
  //Indexof and Lastindex
 
@@ -305,6 +324,43 @@ console.log(name+2); //22, it takes '2' as a string
      return person.name === "NN"
     })
     console.log(myIndex);
+
+
+//-----------------------------------------------------------
+ //ARRAY REVERSE
+//BEST SHORT METHOD
+  var arr = [1, 2, 3, 4, 5, 6, 7];
+ console.log (arr.reverse());
+
+//------------------------------------------------------------
+ //ARRAY SORT
+ 
+let numbers = [0, 123 , 223, 53, 130, 20, 30 ];
+numbers.sort( function( a , b){
+    if(a > b) return 1;
+    if(a < b) return -1;
+    return 0;
+});
+
+console.log(numbers)
+
+//---------------------------------------------------------
+ //SORT REVERSE
+  
+const prices= [5.99,10.99,3.99,6.59];
+const names= ["ck","Prabhat","Yogesh","Haresh"];
+const info= [{name:"CK"}, {name:"Prabhat"}, {name:"Haresh"}];
+let sortedValue=prices.sort((a,b) => {if(a>b) {
+  return 3;
+} else if(a===b) {
+  return0;
+} else {
+  return -4;
+}});
+console.log(prices);
+console.log(sortedValue);
+console.log(sortedValue.reverse());
+
 
 
 //--------------------------------------------------
@@ -369,7 +425,25 @@ console.log(totalPrices);
 });
 console.log(totalPrices);
 
+//--------------------------------------------------------
+ //ARRAY DESTRUCTING
+ const userDetails= ["Max","Schwarz","Mr",30];
+//  const firstName = userName[0];
+ // const lastName = nameData[1];
+ const[firstName,lastName, ...otherInformation]=nameData;
+ console.log(firstName);
+ console.log(lastName);
+ console.log(otherInformation);
 
+
+//----------------------------------------------------
+ //ARRAY Reduce
+ const prices= [10.99,5.99,3.99,6.59];
+ const sum=prices.reduce((total, curValue, currentIndex, arr) => {
+  return total + curValue;
+},0);
+console.log(prices);
+console.log(sum);
 
 //-------------------------------------------------------
  //SPLIT()
@@ -400,24 +474,6 @@ console.log(totalPrices);
 // console.log(altNumbers);
 
 
-//-----------------------------------------------------------
- //ARRAY REVERSE
-//BEST SHORT METHOD
-  var arr = [1, 2, 3, 4, 5, 6, 7];
- console.log (arr.reverse());
-
-//------------------------------------------------------------
- //ARRAY SORT
- 
-let numbers = [0, 123 , 223, 53, 130, 20, 30 ];
-numbers.sort( function( a , b){
-    if(a > b) return 1;
-    if(a < b) return -1;
-    return 0;
-});
-
-console.log(numbers)
-
 
 //------------------------------------------------------
  //REVERSE with For Loop
@@ -426,28 +482,6 @@ console.log(numbers)
 //     [arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]]; 
 //  }
 //  console.log(arr);
-
-//----------------------------------------------------------
- //REVERSE AARAY
- const articlePrice = [5.99, 10.99, 3.99, 6.59];
-
-  const names = ["Jack", "Nany", "Sam", "Nick"];
-
-  const info = [{ name: "Jack" }, { name: "Nany" }, { name: "Sam"}];
-
-  let sortedValue =articlePrice.sort((a,b) => {
-  if(a>b) {
-    return 3;
-  } else if (a===b) {
-    return 0;
-  }
-  else {
-    return-4;
-  }
-});
-console.log(articlePrice);
-console.log(sortedValue);
-console.log(sortedValue.reverse());
 
 //------------------------------------------------------------
  //Reverse with function reverse
@@ -461,7 +495,6 @@ console.log(sortedValue.reverse());
  }
 
  console.log(reverse([1, 2, 3, 4, 5, 6, 7]));
-
 
 //----------------------------------------------------------
  //*Reverse a STRINg with Function with "" i.e COMMA
@@ -531,25 +564,6 @@ if(age < 18) {
   console.log("you are adult")
 };
 
-//--------------------------------------------------------
- //ARRAY DESTRUCTING
- const userDetails= ["Max","Schwarz","Mr",30];
-//  const firstName = userName[0];
- // const lastName = nameData[1];
- const[firstName,lastName, ...otherInformation]=nameData;
- console.log(firstName);
- console.log(lastName);
- console.log(otherInformation);
-
-
-//----------------------------------------------------
- //ARRAY Reduce
- const prices= [10.99,5.99,3.99,6.59];
- const sum=prices.reduce((total, curValue, currentIndex, arr) => {
-  return total + curValue;
-},0);
-console.log(prices);
-console.log(sum);
 
 //-------------------------------------------------------------------------------
 //Logical Operators
@@ -587,14 +601,6 @@ let x=10, y=10;
   use ! i.e
  !x =False
 
-
- //-----------------------------------------------------
-  //ARRAY CONCAT
-  const arr1 =[12, 33, 44, 555];
-
-  let newArr = arr1.concat([23424, 23525, 235542]);
-  console.log(newArr.push(34));
-  console.log(newArr);
 
       
       
