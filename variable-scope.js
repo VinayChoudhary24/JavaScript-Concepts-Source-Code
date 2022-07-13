@@ -212,7 +212,7 @@ console.log(name+2); //22, it takes '2' as a string
  console.log(typeof ("John"))              // Returns "string"
  console.log(typeof (3.14))                // Returns "number"
  console.log(typeof (NaN))                 // Returns "number"
- console.log(typeof (false))                  // Returns "boolean"
+ console.log(typeof (falsse))                  // Returns "boolean"
  console.log(typeof ([1,2,3,4]))              // Returns "object"
  console.log(typeof ({name:'John', age:34}))  // Returns "object"
  console.log(typeof (new Date()))             // Returns "object"
@@ -386,9 +386,9 @@ for (let i = 0; i < n; i++) {
  
 let numbers = [0, 123 , 223, 53, 130, 20, 30 ];
 numbers.sort( function( a , b){
-    if(a > b) return 1; //always use positive value here, use negative value to sort reverse
+    if(a > b) return 1; //always use positive value for ascending sort here, use negative value to sort descending
 
-    if(a < b) return -1; //always use negative value here, use positive value to sort reverse
+    if(a < b) return -1; //always use negative value for ascending here, use positive value to sort desscending
     return 0;
 });
 
