@@ -306,6 +306,54 @@ const arr3 = Array.from("hello");
   console.log(personData.indexOf({name:"CK"}));
   console.log(personData.lastIndexOf({name:"prabhat"}));
 
+
+//----------------------------------------------------------------
+/* Q2. write a program to print the below pattern of stars.
+*
+**
+***
+****
+***** */
+
+//A2:-
+
+/*
+for (var i=1; i<=5; i++){
+  console.log("*".repeat(i));
+}
+
+//--------------------------------------------------------------------------------
+/* Q3. write a program to print the pyramid of stars. */ 
+
+//A3.
+
+function pyramid(n){
+  for(let i=1; i<=n; i++){
+    let str =" ".repeat(n-i);
+    let str2 ="*".repeat(i*2 -1)
+
+    console.log(str + str2 + str);
+  }
+}
+pyramid(5);
+      
+//----------------------------------------
+ //REVERSE PYRAMID
+      
+let n = 5;
+// External loop
+for (let i = 0; i < n; i++) {
+  // printing spaces
+  for (let j = 0; j < i; j++) {
+    process.stdout.write(' ')
+  }
+  // printing star
+  for (let k = 0; k < 2 * (n-i) - 1; k++) {
+    process.stdout.write('*')
+  }
+  console.log();
+}
+
 //-------------------------------------------------------------
 //when we have array of objects we use the find() and findIndexOf() to take out the element NOT INDEX.. 
 //Find() 
@@ -631,38 +679,6 @@ let x=10, y=10;
       
       
       
-
-/* Q3. write a program to print the pyramid of stars. */ 
-
-//A3.
-
-
-function pyramid(n){
-  for(let i=1; i<=n; i++){
-    let str =" ".repeat(n-i);
-    let str2 ="*".repeat(i*2 -1)
-
-    console.log(str + str2 + str);
-  }
-}
-pyramid(5);
-      
-//----------------------------------------
- //REVERSE PYRAMID
-      
-let n = 5;
-// External loop
-for (let i = 0; i < n; i++) {
-  // printing spaces
-  for (let j = 0; j < i; j++) {
-    process.stdout.write(' ')
-  }
-  // printing star
-  for (let k = 0; k < 2 * (n-i) - 1; k++) {
-    process.stdout.write('*')
-  }
-  console.log();
-}
 
    
 
