@@ -496,7 +496,7 @@ console.log(prices);
 console.log(sum);
 
 //-------------------------------------------------------
- //SPLIT()
+ //SPLIT() //CONVERT STRING TO ARRAY
  const text = "Welcome to JavaScript Tutorial - ItsJavaScript";
 
 // split the text into words using space as delimiter
@@ -508,7 +508,7 @@ console.log(sum);
  console.log(sub);
 
 //------------------------------------------------------------
- //JOIN()
+ //JOIN() //CONVERT ARRAY TO STRING
 
 const name = ["V", "C"];
 let joinedname = name.join("");
@@ -528,6 +528,12 @@ console.log(joinedname)
 //  console.log(altNumbers.push(6767, 98));
 // //  console.log(numbers);
 // console.log(altNumbers);
+
+//
+const prices= [10.99,5.99,3.99,6.59];
+const copiedPrices= [...prices];
+prices.push(12.99);
+console.log(prices,copiedPrices["0"]);
 
 
 
