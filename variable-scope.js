@@ -522,14 +522,14 @@ console.log(result);
 
 //-------------------------------------------------
  //IF-ELSE IF -ELSE
-let age = 18;
- if(age<17) {
-  console.log("you are not adult");
- } else if(age>40) {
-  console.log("you are old")
- } if(age === 18) {
+let age = 158;
+if(age < 18) {
+  console.log("not adult");
+} else if (age > 48) {
+  console.log("you are old");
+} else {
   console.log("you are adult")
- };
+};
 
 //--------------------------------------------------------
  //ARRAY DESTRUCTING
