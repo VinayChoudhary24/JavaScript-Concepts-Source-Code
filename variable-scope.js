@@ -509,6 +509,12 @@ console.log(sum);
 
 //------------------------------------------------------------
  //JOIN()
+
+const name = ["V", "C"];
+let joinedname = name.join("");
+console.log(joinedname)
+
+
  const myText = "It is a long established fact that a reader will"
  const newText = myText.split(" ").join("")
  console.log(newText);
