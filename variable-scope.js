@@ -245,8 +245,9 @@ console.log(name+2); //22, it takes '2' as a string
   console.log(yetMoreNumbers); //error
   console.log(arr2); //[1, 2]
 
- const arr3 = Array.from("hello");
- console.log(arr3); //Split h, e, l, l, o
+/CONVERT STRING INTO ARRAY 
+const arr3 = Array.from("hello");
+ console.log(arr3); //Split [h, e, l, l, o]
  
 
 //----------------------------------------------------------
@@ -333,29 +334,30 @@ console.log(name+2); //22, it takes '2' as a string
  console.log (arr.reverse());
 
 //------------------------------------------------------------
- //ARRAY SORT
+ //ARRAY SORT[BUBBLE SORT]
  
 let numbers = [0, 123 , 223, 53, 130, 20, 30 ];
 numbers.sort( function( a , b){
-    if(a > b) return 1;
-    if(a < b) return -1;
+    if(a > b) return 1; //always use positive value here, use negative value to sort reverse
+
+    if(a < b) return -1; //always use negative value here, use positive value to sort reverse
     return 0;
 });
 
 console.log(numbers)
 
 //---------------------------------------------------------
- //SORT REVERSE
+ //SORT-REVERSE together
   
 const prices= [5.99,10.99,3.99,6.59];
 const names= ["ck","Prabhat","Yogesh","Haresh"];
 const info= [{name:"CK"}, {name:"Prabhat"}, {name:"Haresh"}];
 let sortedValue=prices.sort((a,b) => {if(a>b) {
-  return 3;
+  return 1; //always use positive value here, use negative value to sort reverse
 } else if(a===b) {
   return0;
 } else {
-  return -4;
+  return -1; //always use negative value here, use positive value to sort reverse
 }});
 console.log(prices);
 console.log(sortedValue);
