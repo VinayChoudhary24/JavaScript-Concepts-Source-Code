@@ -418,7 +418,7 @@ let person = {
     console.log(`hello, my name is ${person.name}, my age is ${person.age}`)
   }
 }
-person.getDetails(); 
+person.getDetails(); //WITH THIS KEYWORD DECLARE OBJECT NAME Instead of THIS Keyword.
 
 
 
