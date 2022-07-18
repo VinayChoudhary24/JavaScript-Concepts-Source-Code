@@ -482,6 +482,328 @@ for(p in person) {
 // console.log(obj.name);
 
 
+//-------------------------------------------------------------------
+//---------------CLASS---------------------------------------
+//-------------------------------------------------------------------
+
+//----------------------------------------------------------
+//  //NOT(!) OPERATOR
+// let userInput= "";
+
+// let isUserInput = userInput ? true : false; //FALSE
+
+// let isUserInput = !userInput ? true : false; //TRUE
+
+// let isUserInput= !!userInput; //FASLE
+
+// console.log(isUserInput);
+
+//----IF-ELSE
+// let userInput = "",
+
+//  let isUserInput = !userInput ? true : false; //let is disallowed  in lexical bound
+
+// if(isUserInput) {
+//   console.log("this is true");
+// }else{
+//   console.log("this is flase"); //error
+// }
+
+//---OR(||) Operator---------------------
+
+// || used to assign default value
+// let realUserName = "Chandrakant"; //channdrakanta
+
+
+// let realUserName = "";
+// let userName = realUserName || "CK";
+
+// console.log(userName); //CK
+
+//------AND (&&) OPERATOR------------
+// let isLoggedin = true;
+
+// let shoppingCart = isLoggedin && ["Books, Fruits"]; //books, fruits
+
+// let shoppingCart = isLoggedin && null; //null
+
+// console.log(shoppingCart)
+
+//------SWITCH-CASE-------------------
+ //one VALUE
+
+// let val="CK";
+// switch(val) {
+//   case "CK":
+//     console.log("This is CK");
+//     console.log("CK is going to Market");
+//     break;
+//     case "Prabhat":
+//       console.log("This is Prabhat");
+//       console.log("Prabhat is going to School");
+//       break;
+//       default:
+//         console.log("No one is there");
+//         console.log("No Activity is performed");
+//       }
+
+///--------FOR LOOP------------
+ //executes loop over CONDITION
+
+//  for( let i = 0; i<3; i++) {
+//   console.log("------------"); //-----------
+
+// } for( let i = 10; i>0; i--) {
+//   console.log(i) //10,9,8,7.....
+// };
+
+//-----FOR OF---------------------------------
+ //Executes Over each ELEMENT of ARRAY[]
+
+//  let arr = ["CK","Prabhat","Pankaj"];
+//  let str = "This is string";
+
+// for(const value of arr) {
+//   console.log(arr.indexOf(value), ":", value);
+//   console.log(); //value with INDEX
+// }
+
+//-----FOR IN---------------------------------
+ //executes over each KEY in OBJECT
+
+//  // Single loop
+//  let obj = {
+//   name: "CK",
+//   age:30,
+//   hobby:"music, cricket",
+// };
+// for(const o in obj) {
+//   console.log(`${o}=>${obj[o]}`);
+// } 
+
+
+// //loop inside loop
+// let arr = [{
+//   name:"CK",
+//   age: 30,
+//   hobby: "Playing cricket",
+// },
+// {
+//   name:"Prabhat",
+//   age:22,
+//   hobby:"Singing",
+// },
+// {
+//   name:"Pankaj",
+//   age:28,
+//   hobby:"Dncing",
+// },
+// ];
+
+// let i = 0;
+// for(const element of arr) {
+//   console.log(`#${i}`);
+//   for(const key in element) {
+//     console.log(`${key}=>${element[key]}`);
+//   }
+//   i++;
+// }
+
+//----BREAk and CONTINUE-----------------------------------
+ //Break statement Will BREAK the EXECUTION at the POINT and TERMINATE THE LOOP.
+
+ //CONTINUE will BREAK the EXECUTION at ONLY That Point and Will CONTINUE after that.
+
+//  for( let i = 0; i<10;i++) {
+//   if(i==5) {
+//     // break; //0,1,2,3,4,BREAK
+
+//     continue; //0,1,2,3,4,BREAK,6,7,8,9
+//   }
+//   console.log(i);
+//  }
+
+
+// for ( let i = 0; i < 5; i++) {
+//     if (i == 2) {
+//         continue;   
+//   }
+//     console.log(i);
+//     for (let i = 0; i < 10; i++) {
+//         if (i == 5) {
+//             break;
+//     }
+//         console.log(`i:${i}`);
+//       }
+//     }
+
+ //---------------------------------------------------------
+ //------CLASSES AS CONSTEUCTOR----------------------------
+ //-------------------------------------------------------
+  
+//  class person {
+
+//   //we dont use keyword function for PARAMETER in CLASS INSTEAD we use CONSTRUCTOR KEYWORD for PASSING PARAMETERs
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//     greet() {
+//       console.log(`Hello, i'm ${this.name} and my age is ${this.age}`);
+//       console.log("For " +this.name+ " Honesty is the Best Policy");
+//     }
+//  };
+
+//  //CALL CONSTRUCTOR WITH THE KEY NEWKEYWORD
+//  let constructPerson = new person("Jacky", 28);
+//  constructPerson.greet(); 
+
+
+// class Person2 {
+//   constructor(age,name) {
+//     // this.age =age||30;
+//     // this.name =name||"CK"; //Retur PRABHAT AND 25
+    
+//     // this.age =age && 30;
+//     // this.name =name && "CK"; //Return CK and 30
+//   }
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);
+//   }
+// }
+
+// let classObj= new Person2(25,"Prabhat");
+// classObj.greet();
+
+
+//-----------------------------------------------------------
+ //STATIC METHOD
+
+// class Person2 {
+//   constructor(age,name) {
+//     this.age =age||30;
+//     this.name=name||"CK";
+//   }
+//   greet() {
+//     console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);}profession="IT Professional";
+    
+//     //ADD PROPERTY wit STATIC KEYWORD
+//     static address ="Ahmedabad";
+
+//     //ADD METHOD WITH STATIC KEYWORD
+//     static showAddress() {
+//       console.log(`I am staying in ${this.address}`);
+//     }
+//   };
+
+//   let constructPerson = new Person2(28, "Jacky");
+//   constructPerson.greet();
+  
+//   console.log(constructPerson.profession);
+
+//   Person2.showAddress();
+
+//   // constructPerson.showAddress(); //ERROR
+
+//   // console.log(constructPerson.showAddress()); //ERROR
+
+//---------------------------------------------------------
+  //EnCApsulation
+
+  // class person {
+  //   constructor(name,id) {
+  //     this.name =name;
+  //     this.id =id;
+  //   }
+  //   add_Address(add) {
+  //     this.address =add;
+  //     this.getDetails = function() {
+  //       console.log(`Name is ${this.name}, Address is: ${this.address}`);
+  //     };
+  //     this.getDetails();
+  //   }
+  // }
+  
+  // let person1 = new person("CK",21);
+  // person1.add_Address("Ahmedabad");
+
+  //--------------------------------------------------------
+  //  //INHERITANCE
+  //  class person {
+  //   constructor(name) {
+  //     this.name=name;
+  //   }
+  //   //method to return the string 
+  //   displayName1() {
+  //     return`Name of person: ${this.name}`;
+  //   }
+  // }
+  // class student extends person {
+  //   constructor(name,id) {
+  //     //super keyword for calling above class constructor
+  //     super(name);
+  //     this.id=id;
+  //   }
+  //   displayName(params) {
+  //     console.log(params);
+  //     console.log(` ${super.displayName1()},
+  //     Student ID: ${this.id}` );
+  //   }
+  // }
+  // let student1 = new student("Mukul", 22);
+  // student1.displayName();
+
+  //-------------------------------
+  //-----INHERITANCE INSTANCEOF OPERATOR--------------
+
+  // class person {
+  //   constructor(name) {
+  //     this.name =name;
+  //   }
+  //   //method to return the stringd is
+  //   displayName() {
+  //     return`Name of person: ${this.name}`;
+  //   }
+  // }
+  // class student extends person{
+  //   #id="";
+  //   constructor(name,id) {
+  //     //super keyword for calling above class constructor
+  //     super(name);
+  //     this.#id= id;
+  //   }
+  //     displayName() {
+  //       console.log(` ${super.displayName()},
+  //       StudentID: ${this.#id}`);
+  //     }
+  //   }
+  //   let student1 = new  student("Mukul",22);
+  //   student1.displayName();
+  //   // console.log(student1.#id);
+
+  //   //CALL the INSTANCEOF Operator
+  //   console.log(student1 instanceof student);
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //-------------------------------------------------------------
 //------------------------------------------------------------
