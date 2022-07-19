@@ -401,21 +401,14 @@ const arr3 =[["one", "three"], [12,44,23]];
 console.log(arr3[0][1]); //THREE
 console.log(arr3[1][2]); //23
        
-//example for objects 
-       
-const arr4 =[  
-   {name:"ak", no:34},[
-      //declare two objects
-      {name:"sos", subjects:"js"},
-      {
-         name:"os",  subjects:"literals"   
-      }
-   ]
-];      
-console.log(arr4[1][0].name); //SOS
-console.log(arr4[0].no);      //34
-console.log(arr4[1][1].subjects); //LITERALS
-      
+//example for objects        
+let arr = [{name: "VC", age: 22}, 
+[{name: "CC", age: 33}, {name: "BB", age: 44}]];
+
+console.log(arr[0].age); //22
+console.log(arr[1][0].age); //33
+console.log(arr[1][1].age); //44
+
 //example for functions
 const arr5=[{
    name:"jss", videos:1213     
