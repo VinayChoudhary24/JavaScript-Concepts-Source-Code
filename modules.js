@@ -352,6 +352,10 @@ let x=100, y=10;
   console.log("false")
  };
 
+//Ternary Operator
+let x=1, y=11;
+x===1, y=11 ? console.log("true") : console.log("false");
+
 //---------------------------------------------------------
  //EQUALITY
  let obj1 = {name:"CK"};
