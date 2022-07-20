@@ -22,35 +22,54 @@ let userDetails2 = {
 userDetails.printDetails.call(userDetails2);
 
 //BIND
- let obj= {
-  fname:"ChandraKant",
-  lanme:"Pradhan",
-  age:30,
-  address:"Ahmedabad",
-  formatName:function() {
-    //console.log(this);
-    console.log(`My name is ${this.fname} ${this.lanme}`);
-  },
-  formatName: () => {
-    console.log(this);
-      console.log(`My name is ${this.fname} ${this.lanme}`);
-    }
-  };
-    Access the method directly referring to the Object
-    obj.formatName(); //Y
 
-    //Access the methods indirectly and later on
-    let formatName = obj.formatName;
-    let { formatName } = obj;
-    formatName = formatName.bind(obj);
-    formatName();// 
+let user = {
+  name: "VI",
+  age: 33,
+  print: function () {
+    console.log(`my name ${this.name}, age ${this.age}`)
+  }
+}
+user.print();
 
-    //Access the methods indirectly and immediately
-    formatName.call(obj, 2, 4, 5); 
-    // takes parameter with comma separated
+let user2 = {
+  name: "aF",
+  age: 3333,
+}
+let myFun = user.print.bind(user2);
+myFun();
 
-//APPLY    
-formatName.apply(obj, [4, 2.6]); // take parameteras an array
+
+//--------------------------------------------------
+//  let obj= {
+//   fname:"ChandraKant",
+//   lanme:"Pradhan",
+//   age:30,
+//   address:"Ahmedabad",
+//   formatName:function() {
+//     //console.log(this);
+//     console.log(`My name is ${this.fname} ${this.lanme}`);
+//   },
+//   formatName: () => {
+//     console.log(this);
+//       console.log(`My name is ${this.fname} ${this.lanme}`);
+//     }
+//   };
+//     Access the method directly referring to the Object
+//     obj.formatName(); //Y
+
+//     //Access the methods indirectly and later on
+//     let formatName = obj.formatName;
+//     let { formatName } = obj;
+//     formatName = formatName.bind(obj);
+//     formatName();// 
+
+//     //Access the methods indirectly and immediately
+//     formatName.call(obj, 2, 4, 5); 
+//     // takes parameter with comma separated
+
+// //APPLY    
+// formatName.apply(obj, [4, 2.6]); // take parameteras an array
  
 //------------------------------------------------------------------
 //----------------------------------------------------------------------
