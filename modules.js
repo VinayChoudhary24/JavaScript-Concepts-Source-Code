@@ -109,24 +109,32 @@ pyramid(5);
 //----------------------------------------
  //REVERSE PYRAMID
       
- let n = 5;
- let string = "";
+let n=5;
+for(i=0; i<n; i++) {
+  let str = " ".repeat(i);
+  let str2 = "*".repeat(2*(n-i) -1);
+  console.log(str + str2);
+}
 
- // External loop--the Value of i and j will be same at a time i.e 0...
- for (let i = 0; i < n; i++) {
 
-   // printing spaces
-   for (let j = 0; j < i; j++) {
-     string += " ";
-   }
+//  let n = 5;
+//  let string = "";
 
-   // printing star
-   for (let k = 0; k < 2 * (n-i) - 1; k++) {
-     string += "*";
-   }
-   string += "\n";
- }
- console.log(string);
+//  // External loop--the Value of i and j will be same at a time i.e 0...
+//  for (let i = 0; i < n; i++) {
+
+//    // printing spaces
+//    for (let j = 0; j < i; j++) {
+//      string += " ";
+//    }
+
+//    // printing star
+//    for (let k = 0; k < 2 * (n-i) - 1; k++) {
+//      string += "*";
+//    }
+//    string += "\n";
+//  }
+//  console.log(string);
 
 //---------------------------------------------------
 //---------------------------------------------------
