@@ -1517,6 +1517,13 @@ class Person2 {
 
   
 
+let x = arr.sort((a,b) =>b.id -a.id)
+let y = x.filter(a => {
+    if(a.isConnected==true && a.state=="active")
+    return a;
+});
+console.log(y);
+console.log(x);
 
 
 
