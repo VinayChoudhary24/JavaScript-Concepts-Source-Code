@@ -232,6 +232,25 @@ person.getDetails(); //WITH THIS KEYWORD DECLARE OBJECT NAME Instead of THIS Key
 //------------------------------------------------
 //Variable Declarationn and Variable Initialization
 /*
+
+/-----------SCOPE-----------------------------------------------
+### VAR Dosent supports block Scope
+var a = 1;
+if(true) {
+  var a = 4;
+  console.log(a)
+}
+console.log(a)
+
+### LET dosent support functional scope
+let a =10;
+const print = function () {
+  console.log(a);
+  let b = 9;
+}
+print();
+---------------------------------------------------------------
+
 var msg;
 msg="Hello JavaScript!";// assigned a string value
 console.log(msg);// access a variable
@@ -400,6 +419,10 @@ console.log(typeof (function () {}))         // Returns "function"
 console.log(typeof (myCar))                  // Returns "undefined" *
 console.log(typeof (null))                   // Returns "object"
 console.log(typeof(undefined));        //UNDEFINED
+
+Primitive: string, number, null, undefined, boolean
+non-primitive: object, array, function, date
+
 //--------------------------------------------------------------
  //UNDEFINED:- Default value of uninitialized variables
 
